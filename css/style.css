@@ -1,0 +1,259 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+:root {
+    --primary: #5b4bdb;
+    --primary-dark: #4032ae;
+    --secondary: #19b5fe;
+    --dark: #17172a;
+    --muted: #6c7180;
+    --light: #f5f7fb;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #23263a;
+    background: #ffffff;
+}
+
+section {
+    scroll-margin-top: 78px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+.site-navbar {
+    background: rgba(23, 23, 42, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand span {
+    color: #9f96ff;
+}
+
+.nav-link {
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero-section {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 80px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at top right, rgba(25, 181, 254, 0.25), transparent 35%),
+        linear-gradient(135deg, #17172a 0%, #2c216e 58%, #4032ae 100%);
+}
+
+.highlight {
+    color: #9f96ff;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    right: -16px;
+    bottom: -16px;
+    width: 140px;
+    height: 140px;
+    border-radius: 28px;
+    background: rgba(25, 181, 254, 0.25);
+    z-index: 0;
+}
+
+.hero-image-wrapper img {
+    position: relative;
+    z-index: 1;
+    min-height: 390px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   TÍTULOS DE SEÇÃO
+========================================================= */
+.section-kicker {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.section-description {
+    max-width: 680px;
+}
+
+/* =========================================================
+   INDICADORES
+========================================================= */
+.stat-card {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    border: 1px solid #e9ebf2;
+    box-shadow: 0 12px 30px rgba(24, 27, 52, 0.05);
+}
+
+.stat-number {
+    margin-bottom: 0.4rem;
+    color: var(--primary);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 800;
+}
+
+/* =========================================================
+   CARDS DE CURSOS
+========================================================= */
+.course-card {
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(24, 27, 52, 0.12) !important;
+}
+
+.course-card .card-img-top {
+    height: 215px;
+    object-fit: cover;
+}
+
+.course-badge {
+    background: #efedff;
+    color: var(--primary-dark);
+}
+
+/* =========================================================
+   TABELA
+========================================================= */
+.table-responsive {
+    border: 1px solid #e7e9ef;
+}
+
+/* =========================================================
+   NOTÍCIAS
+========================================================= */
+.news-card {
+    padding: 1.5rem;
+    border: 1px solid #e9ebf2;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 12px 28px rgba(24, 27, 52, 0.05);
+}
+
+.news-date {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   CONTATO
+========================================================= */
+.contact-section {
+    background:
+        radial-gradient(circle at top left, rgba(25, 181, 254, 0.18), transparent 25%),
+        linear-gradient(135deg, #17172a 0%, #2c216e 100%);
+    color: #ffffff;
+}
+
+.contact-info p {
+    margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+.footer {
+    background: #11111e;
+}
+
+.footer-brand {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.social-link {
+    display: inline-flex;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid #3b3d50;
+    border-radius: 0.6rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-link:hover {
+    background: #27283a;
+    border-color: #56586f;
+    color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+@media (max-width: 991.98px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 120px;
+    }
+
+    .hero-image-wrapper {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section {
+        padding-top: 105px;
+        padding-bottom: 60px;
+    }
+
+    .hero-image-wrapper img {
+        min-height: 280px;
+    }
+
+    .course-card .card-img-top {
+        height: 190px;
+    }
+}
